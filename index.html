@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cardápio</h1>
+        <div id="productList"></div>
+        
+        <div id="cart">
+            <h2>Carrinho</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: R$ <span id="totalAmount">0.00</span></p>
+            <button id="checkoutBtn">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Forma de Pagamento</h2>
+            <select id="paymentMethod">
+                <option value="pix">PIX</option>
+                <option value="card">Cartão</option>
+                <option value="money">Dinheiro</option>
+            </select>
+            <div id="deliveryOption">
+                <label><input type="radio" name="delivery" value="delivery"> Entrega</label>
+                <label><input type="radio" name="delivery" value="pickup"> Retirada</label>
+            </div>
+            <div id="addressFields" style="display: none;">
+                <label>Endereço:</label>
+                <input type="text" id="address" placeholder="Digite o endereço">
+            </div>
+            <button id="confirmOrderBtn">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
